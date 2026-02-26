@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/langchain-ai/langgraph/main/libs/langgraph/langgraph/templates/schema.json",
+  "graphs": {
+    "customer_support": {
+      "module": "src.graph",
+      "function": "build_graph"
+    }
+  },
+  "env": ".env",
+  "python_version": "3.11",
+  "dependencies": ["requirements.txt"]
+}
