@@ -7,6 +7,8 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Workflow triggers on push to main, PRs targeting main, and manual dispatch
+
 jobs:
   lint:
     name: Lint
