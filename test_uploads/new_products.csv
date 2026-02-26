@@ -1,0 +1,6 @@
+name,category,price,description
+"CloudGuard Pro","security","89.99","Advanced cloud security suite with real-time threat detection, automated incident response, and compliance monitoring for multi-cloud environments."
+"DataSync Enterprise","integration","149.99","Enterprise-grade data synchronization platform supporting 200+ connectors, real-time CDC, and schema evolution across hybrid infrastructure."
+"AI Assistant Hub","ai","199.99","Centralized AI agent management platform with model routing, prompt versioning, usage analytics, and team collaboration tools."
+"DevOps Accelerator","devops","119.99","CI/CD pipeline orchestrator with built-in testing frameworks, deployment strategies (blue-green, canary), and infrastructure-as-code templates."
+"ComplianceBot","compliance","79.99","Automated regulatory compliance checker supporting SOC 2, GDPR, HIPAA, and PCI-DSS frameworks with continuous monitoring and audit report generation."

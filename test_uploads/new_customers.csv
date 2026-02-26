@@ -1,0 +1,6 @@
+name,email,phone,account_type,subscription_tier,join_date,address,account_status
+"Alice Chen","alice.chen@techstartup.io","555-0201","business","premium","2026-01-15","742 Innovation Blvd, Austin TX 78701","active"
+"Bob Martinez","bob.martinez@globalcorp.com","555-0202","enterprise","enterprise","2025-11-03","100 Corporate Park, Chicago IL 60601","active"
+"Carol Nguyen","carol.nguyen@freelance.dev","555-0203","personal","basic","2026-02-10","88 Creative Way, Portland OR 97201","active"
+"David Okafor","david.okafor@university.edu","555-0204","personal","basic","2026-01-28","500 Campus Dr, Ann Arbor MI 48109","active"
+"Eva Kowalski","eva.k@retailchain.com","555-0205","business","premium","2025-12-20","333 Commerce St, Denver CO 80202","active"

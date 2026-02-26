@@ -1,0 +1,739 @@
+TECHCORP EMPLOYEE HANDBOOK
+Effective Date: January 1, 2026
+Version 4.2 — Last Updated: February 2026
+
+========================================================================
+TABLE OF CONTENTS
+========================================================================
+
+1. Welcome & Company Overview
+2. Employment Policies
+3. Compensation & Benefits
+4. Time Off & Leave Policies
+5. Workplace Conduct & Ethics
+6. Remote Work & Hybrid Policy
+7. Information Security & Data Protection
+8. Intellectual Property
+9. Performance Management
+10. Disciplinary Procedures
+11. Health, Safety & Wellness
+12. Diversity, Equity & Inclusion
+13. Grievance & Complaint Procedures
+14. Separation & Offboarding
+15. Acknowledgment
+
+========================================================================
+1. WELCOME & COMPANY OVERVIEW
+========================================================================
+
+Welcome to TechCorp! We are a leading provider of cloud-based customer
+support and enterprise software solutions. Founded in 2018, TechCorp
+serves over 10,000 businesses worldwide with products spanning security,
+data integration, AI-powered automation, DevOps tooling, and regulatory
+compliance.
+
+Our mission is to empower organizations with intelligent, scalable
+technology that transforms how they serve their customers. We believe
+in building products that are not only powerful but also ethical,
+transparent, and accessible.
+
+1.1 Company Values
+
+TechCorp operates on five core values:
+
+  - Customer Obsession: Every decision starts with the customer.
+  - Innovation Without Boundaries: We challenge assumptions and
+    embrace experimentation.
+  - Radical Transparency: We share context openly and communicate
+    honestly, even when it is uncomfortable.
+  - Ownership Mentality: Everyone acts like a founder. We take
+    responsibility for outcomes, not just tasks.
+  - Inclusive Excellence: Diverse perspectives drive better products
+    and a stronger company.
+
+1.2 Organizational Structure
+
+TechCorp is organized into the following divisions:
+  - Engineering (Platform, AI/ML, Infrastructure, Security)
+  - Product Management
+  - Customer Success & Support
+  - Sales & Marketing
+  - People Operations (HR, Recruiting, L&D)
+  - Finance & Legal
+  - Operations & IT
+
+Each division is led by a Vice President who reports to the Chief
+Executive Officer. Engineering teams operate in cross-functional squads
+following an agile methodology with two-week sprint cycles.
+
+========================================================================
+2. EMPLOYMENT POLICIES
+========================================================================
+
+2.1 Equal Employment Opportunity
+
+TechCorp is an equal opportunity employer. We do not discriminate based
+on race, color, religion, sex, sexual orientation, gender identity,
+national origin, age, disability, veteran status, or any other legally
+protected characteristic. This policy applies to all terms and
+conditions of employment, including recruiting, hiring, placement,
+promotion, termination, layoff, recall, transfer, leaves of absence,
+compensation, and training.
+
+2.2 At-Will Employment
+
+Employment at TechCorp is at-will unless you have a written employment
+contract stating otherwise. This means that either you or TechCorp may
+terminate the employment relationship at any time, with or without
+cause, and with or without notice. Nothing in this handbook constitutes
+a contract of employment or a guarantee of continued employment.
+
+2.3 Background Checks
+
+All offers of employment are contingent upon successful completion of
+a background check, which may include criminal history, education
+verification, employment verification, and credit history (where
+permitted by law). TechCorp will consider the nature, gravity, and
+recency of any findings in accordance with applicable fair-chance
+hiring laws.
+
+2.4 Employment Classifications
+
+  - Full-Time: Employees regularly scheduled to work 40 hours per week.
+    Eligible for all benefits.
+  - Part-Time: Employees regularly scheduled to work fewer than 30
+    hours per week. Eligible for limited benefits as outlined in the
+    benefits section.
+  - Temporary/Contract: Employees hired for a specific project or
+    time period. Not eligible for benefits unless specified in their
+    contract.
+  - Intern: Participants in TechCorp's internship program. Paid at
+    a competitive hourly rate. Not eligible for benefits.
+
+2.5 Onboarding
+
+New employees undergo a structured 90-day onboarding program:
+  - Week 1: Orientation, IT setup, security training, compliance
+    training, and team introductions.
+  - Weeks 2-4: Role-specific training, shadowing, and first project
+    assignment.
+  - Weeks 5-12: Gradual ramp-up with regular check-ins from manager
+    and assigned onboarding buddy.
+  - Day 90: Formal onboarding review and transition to regular
+    performance cycle.
+
+========================================================================
+3. COMPENSATION & BENEFITS
+========================================================================
+
+3.1 Compensation Philosophy
+
+TechCorp targets the 75th percentile of market compensation for all
+roles. We benchmark annually against industry surveys covering base
+salary, equity, and total compensation. Pay decisions are based on
+role, level, experience, performance, and geographic location.
+
+3.2 Pay Structure
+
+  - Base Salary: Paid semi-monthly on the 15th and last day of each
+    month via direct deposit.
+  - Equity: All full-time employees receive stock option grants at
+    hire, vesting over 4 years with a 1-year cliff. Additional
+    refresh grants are awarded annually based on performance.
+  - Annual Bonus: Target bonus ranges from 10% (individual contributor)
+    to 25% (VP+) of base salary, based on individual and company
+    performance.
+  - Signing Bonus: Offered selectively; subject to 12-month repayment
+    if employee voluntarily leaves within the first year.
+
+3.3 Benefits Overview
+
+  - Health Insurance: Medical, dental, and vision coverage through
+    Aetna. TechCorp pays 90% of the premium for employees and 75%
+    for dependents. Coverage begins on the first day of employment.
+  - Life Insurance: Company-paid life insurance equal to 2x annual
+    base salary, up to $500,000. Supplemental life insurance available
+    at employee cost.
+  - Disability Insurance: Short-term disability (60% of salary for
+    up to 26 weeks) and long-term disability (60% of salary after 26
+    weeks) fully paid by TechCorp.
+  - 401(k) Retirement Plan: TechCorp matches 100% of the first 4% of
+    employee contributions. Immediate vesting.
+  - HSA/FSA: Health Savings Account (with high-deductible plan) or
+    Flexible Spending Account. TechCorp contributes $1,000 annually
+    to HSA for individual coverage, $2,000 for family.
+  - Employee Stock Purchase Plan (ESPP): Purchase TechCorp stock at
+    a 15% discount through payroll deductions.
+  - Professional Development: $3,000 annual stipend for conferences,
+    courses, certifications, and books. Additional budget available
+    with manager approval.
+  - Home Office Stipend: $1,500 one-time setup allowance for new
+    remote employees, plus $75/month ongoing for internet and supplies.
+  - Wellness Program: $100/month wellness stipend for gym, fitness
+    apps, mental health services, or ergonomic equipment.
+  - Commuter Benefits: Pre-tax transit and parking benefits up to
+    IRS limits.
+  - Employee Assistance Program (EAP): Free, confidential counseling
+    and referral services for employees and family members.
+
+========================================================================
+4. TIME OFF & LEAVE POLICIES
+========================================================================
+
+4.1 Paid Time Off (PTO)
+
+TechCorp provides a flexible PTO policy:
+  - Years 0-2: 20 days (160 hours) per year
+  - Years 3-5: 25 days (200 hours) per year
+  - Years 6+: 30 days (240 hours) per year
+
+PTO accrues on a semi-monthly basis. Maximum accrual cap is 1.5x
+the annual allotment. Employees are encouraged to take at least 10
+consecutive days off per year for rest and recharging.
+
+4.2 Holidays
+
+TechCorp observes the following paid holidays:
+  - New Year's Day (January 1)
+  - Martin Luther King Jr. Day
+  - Presidents' Day
+  - Memorial Day
+  - Juneteenth (June 19)
+  - Independence Day (July 4)
+  - Labor Day
+  - Indigenous Peoples' Day
+  - Veterans Day (November 11)
+  - Thanksgiving Day and day after
+  - Christmas Eve and Christmas Day (December 24-25)
+  - New Year's Eve (December 31)
+
+Additionally, employees receive 2 floating holidays per year to use
+for personal, cultural, or religious observances.
+
+4.3 Sick Leave
+
+All employees receive 10 paid sick days per year. Sick leave may be
+used for the employee's own illness, medical appointments, or to care
+for an ill family member. Unused sick leave carries over year to year,
+up to a maximum of 30 days.
+
+4.4 Parental Leave
+
+TechCorp provides 16 weeks of fully paid parental leave for all new
+parents (birth, adoption, or foster placement), regardless of gender.
+Leave may be taken continuously or intermittently within the first 12
+months of the child's arrival. An additional 4 weeks of unpaid leave
+is available upon request.
+
+4.5 Bereavement Leave
+
+  - Immediate family (spouse, child, parent, sibling): 5 paid days
+  - Extended family (grandparent, in-law, aunt, uncle): 3 paid days
+  - Close friend or colleague: 1 paid day
+
+Additional time may be granted at manager discretion.
+
+4.6 Jury Duty & Voting
+
+TechCorp provides full pay for jury duty service. Employees are also
+given up to 4 hours of paid time off to vote in local, state, and
+federal elections.
+
+4.7 Military Leave
+
+TechCorp complies with USERRA and all applicable military leave laws.
+Employees called to active duty will receive the difference between
+their military pay and TechCorp salary for up to 12 months.
+
+4.8 Sabbatical
+
+Employees who have completed 7 consecutive years of employment are
+eligible for a 4-week paid sabbatical. This is in addition to regular
+PTO. Sabbaticals must be approved by the employee's VP and HR at least
+3 months in advance.
+
+========================================================================
+5. WORKPLACE CONDUCT & ETHICS
+========================================================================
+
+5.1 Code of Conduct
+
+All TechCorp employees are expected to:
+  - Act with integrity and honesty in all business dealings
+  - Treat colleagues, customers, and partners with respect and
+    professionalism
+  - Avoid conflicts of interest and disclose any potential conflicts
+    to their manager and HR
+  - Comply with all applicable laws, regulations, and company policies
+  - Protect confidential information and company assets
+  - Report any suspected violations of law or policy
+
+5.2 Anti-Harassment & Anti-Discrimination
+
+TechCorp maintains a zero-tolerance policy for harassment,
+discrimination, and retaliation. This includes but is not limited to:
+  - Sexual harassment (unwelcome advances, requests for favors,
+    verbal or physical conduct of a sexual nature)
+  - Racial, ethnic, or religious harassment
+  - Bullying or intimidation
+  - Retaliation against anyone who reports a complaint or participates
+    in an investigation
+
+All complaints are taken seriously and investigated promptly. Employees
+found to have engaged in harassment or discrimination will be subject
+to disciplinary action up to and including termination.
+
+5.3 Substance Abuse Policy
+
+TechCorp is a drug-free workplace. The use, possession, sale, or
+distribution of illegal drugs or controlled substances on company
+premises or while conducting company business is strictly prohibited.
+Employees may not be under the influence of alcohol or drugs during
+work hours. Reasonable accommodation will be provided for employees
+seeking treatment for substance abuse.
+
+5.4 Conflicts of Interest
+
+Employees must avoid situations where personal interests conflict or
+appear to conflict with the interests of TechCorp. Examples include:
+  - Outside employment with a competitor or customer
+  - Financial interests in a company that does business with TechCorp
+  - Hiring or supervising a family member
+  - Accepting gifts or entertainment valued at more than $100 from
+    vendors or customers
+
+All potential conflicts must be disclosed in writing to the employee's
+manager and the Legal department.
+
+5.5 Social Media Policy
+
+Employees are free to use social media on their own time. However:
+  - Do not disclose confidential company information
+  - Clearly state that personal opinions are your own, not TechCorp's
+  - Do not use TechCorp logos or trademarks without authorization
+  - Do not disparage TechCorp, its employees, customers, or partners
+  - Do not engage in online conduct that would violate company policy
+    if done in person
+
+========================================================================
+6. REMOTE WORK & HYBRID POLICY
+========================================================================
+
+6.1 Remote-First Approach
+
+TechCorp operates on a remote-first model. Most roles can be performed
+fully remotely within the United States. Certain roles (e.g., office
+management, facilities, hardware engineering) may require regular
+on-site presence.
+
+6.2 Hybrid Options
+
+Employees near a TechCorp office (Austin, Chicago, or New York) may
+choose a hybrid schedule. Office space is available on a hot-desk basis
+and can be reserved through our workspace management system.
+
+6.3 Core Hours
+
+To facilitate collaboration across time zones, all employees are
+expected to be available during core hours: 10:00 AM - 3:00 PM
+Eastern Time, Monday through Friday. Outside core hours, employees
+have flexibility to structure their workday as they see fit, provided
+they meet their commitments and are responsive to team needs.
+
+6.4 Home Office Requirements
+
+Remote employees must maintain:
+  - A dedicated, quiet workspace
+  - Reliable high-speed internet (minimum 50 Mbps download)
+  - A functional webcam and microphone for video calls
+  - Compliance with all security requirements (VPN, disk encryption,
+    screen lock)
+
+TechCorp provides a laptop, monitor, keyboard, and mouse. Additional
+equipment may be requested through the IT portal.
+
+6.5 International Remote Work
+
+Working from outside the United States requires advance approval from
+HR and Legal due to tax, immigration, and data residency implications.
+Short-term international work (up to 30 days per year) may be approved
+on a case-by-case basis. Long-term international arrangements require
+a formal review process.
+
+========================================================================
+7. INFORMATION SECURITY & DATA PROTECTION
+========================================================================
+
+7.1 General Security Requirements
+
+All employees must:
+  - Complete annual security awareness training within 30 days of
+    their start date and by January 31 each subsequent year
+  - Use strong, unique passwords (minimum 16 characters) managed
+    through the company-provided password manager (1Password)
+  - Enable multi-factor authentication (MFA) on all company accounts
+  - Lock their computer screen when stepping away (Win+L or Cmd+Ctrl+Q)
+  - Report any suspected security incidents to security@techcorp.com
+    within 1 hour of discovery
+
+7.2 Data Classification
+
+TechCorp classifies data into four levels:
+
+  - Public: Information intended for public release (marketing
+    materials, published blog posts, open-source code)
+  - Internal: Day-to-day business information not intended for
+    external distribution (internal wikis, meeting notes, project
+    plans)
+  - Confidential: Sensitive business information (financial data,
+    customer lists, product roadmaps, HR records, unpublished
+    partnerships)
+  - Restricted: Highly sensitive data requiring special handling
+    (customer PII, payment card data, authentication credentials,
+    encryption keys, medical records)
+
+7.3 Data Handling Rules
+
+  - Public data may be shared freely.
+  - Internal data may be shared with any TechCorp employee but not
+    externally without manager approval.
+  - Confidential data must be shared only on a need-to-know basis.
+    External sharing requires NDA and Legal approval. Must be
+    encrypted in transit and at rest.
+  - Restricted data must be encrypted at all times, accessed only
+    through approved systems, logged for audit purposes, and never
+    stored on personal devices. Sharing requires VP and Security
+    team approval.
+
+7.4 Acceptable Use of Technology
+
+Company-provided devices and accounts are primarily for business use.
+Limited personal use is acceptable provided it does not:
+  - Interfere with job performance
+  - Violate any company policy
+  - Consume excessive bandwidth or storage
+  - Introduce security risks
+
+The following are strictly prohibited:
+  - Installing unauthorized software on company devices
+  - Using company email for personal business ventures
+  - Accessing illegal, obscene, or offensive content
+  - Circumventing security controls (VPN, firewalls, DLP)
+  - Connecting to unsecured public Wi-Fi without VPN
+  - Using personal cloud storage (Dropbox, Google Drive personal) for
+    company data
+
+7.5 Incident Response
+
+If you discover or suspect a security incident:
+  1. Do not attempt to investigate or remediate on your own
+  2. Email security@techcorp.com with subject line "[INCIDENT]"
+  3. Include: what happened, when you noticed it, affected systems
+  4. Preserve evidence — do not delete files or clear logs
+  5. The Security team will acknowledge within 30 minutes during
+     business hours
+
+Security incidents are classified by severity:
+  - SEV1 (Critical): Active data breach, ransomware, complete system
+    compromise. Response within 15 minutes, 24/7.
+  - SEV2 (High): Potential data exposure, compromised credentials,
+    phishing success. Response within 1 hour.
+  - SEV3 (Medium): Policy violation, failed attack attempt, suspicious
+    activity. Response within 4 hours.
+  - SEV4 (Low): Informational, best-practice deviation. Response
+    within 1 business day.
+
+7.6 Vendor & Third-Party Security
+
+All third-party vendors that process, store, or transmit TechCorp data
+must undergo a security assessment before onboarding. Vendors handling
+Confidential or Restricted data must demonstrate:
+  - SOC 2 Type II certification or equivalent
+  - Data encryption in transit (TLS 1.2+) and at rest (AES-256)
+  - Incident notification within 72 hours
+  - Data deletion upon contract termination
+
+Vendor assessments are renewed annually. The Security team maintains
+a vendor risk register accessible to all department leads.
+
+========================================================================
+8. INTELLECTUAL PROPERTY
+========================================================================
+
+8.1 Company Ownership
+
+All work product created by employees in the course of their
+employment belongs to TechCorp. This includes, but is not limited to:
+  - Source code, algorithms, and software designs
+  - Product ideas, specifications, and prototypes
+  - Documentation, training materials, and presentations
+  - Inventions, discoveries, and improvements
+  - Trade secrets and proprietary methodologies
+
+8.2 Prior Inventions
+
+Employees must disclose any prior inventions or intellectual property
+that they wish to exclude from the scope of TechCorp's ownership. These
+must be listed on the Prior Inventions Disclosure form during
+onboarding.
+
+8.3 Open Source Contributions
+
+TechCorp encourages open-source participation. However:
+  - Contributions to external open-source projects during work hours
+    must be approved by your engineering manager.
+  - Do not incorporate proprietary TechCorp code into open-source
+    projects.
+  - Review the open-source policy on the internal wiki for approved
+    licenses and contribution guidelines.
+
+8.4 Confidentiality Obligations
+
+All employees sign a Confidentiality and Invention Assignment Agreement
+at hire. Confidentiality obligations survive termination of employment
+and remain in effect indefinitely for trade secrets and for 3 years
+for other confidential information.
+
+========================================================================
+9. PERFORMANCE MANAGEMENT
+========================================================================
+
+9.1 Performance Review Cycle
+
+TechCorp conducts a formal performance review process twice per year:
+  - Mid-Year Review (June-July): Checkpoint on goals, feedback, and
+    development areas. No rating or compensation changes.
+  - Annual Review (December-January): Comprehensive review with
+    formal rating, compensation adjustment, and equity refresh.
+
+9.2 Goal Setting
+
+At the start of each half, employees collaborate with their manager to
+set 3-5 measurable objectives using the OKR (Objectives and Key
+Results) framework. Goals should be ambitious but achievable, aligned
+with team and company priorities.
+
+9.3 Continuous Feedback
+
+Managers are expected to provide regular, ongoing feedback through:
+  - Weekly 1:1 meetings (minimum 30 minutes)
+  - Written feedback after major projects or milestones
+  - Real-time recognition for strong contributions
+
+Employees are encouraged to solicit feedback from peers and skip-level
+managers through the 360-degree feedback tool.
+
+9.4 Performance Ratings
+
+The annual review uses a 5-point rating scale:
+  - 1 - Does Not Meet Expectations: Significant performance gaps
+  - 2 - Partially Meets Expectations: Some areas need improvement
+  - 3 - Meets Expectations: Solid, reliable performance
+  - 4 - Exceeds Expectations: Consistently strong results
+  - 5 - Exceptional: Extraordinary impact, role-model behavior
+
+Compensation adjustments and promotion decisions are informed by
+performance ratings, market data, and internal equity considerations.
+
+9.5 Performance Improvement Plans (PIP)
+
+Employees receiving a rating of 1 or 2 may be placed on a Performance
+Improvement Plan. PIPs are 60-90 days and include:
+  - Specific, measurable improvement objectives
+  - Weekly check-ins with the manager
+  - Resources and support for improvement
+  - Clear consequences if objectives are not met
+
+========================================================================
+10. DISCIPLINARY PROCEDURES
+========================================================================
+
+10.1 Progressive Discipline
+
+TechCorp generally follows a progressive discipline approach:
+  1. Verbal Warning: Informal conversation documented in manager notes
+  2. Written Warning: Formal written notice, placed in employee file
+  3. Final Written Warning: Last notice before potential termination
+  4. Termination: Separation from employment
+
+The severity of the offense determines the starting point. Serious
+violations (theft, violence, harassment, data breach) may result in
+immediate termination without progressive steps.
+
+10.2 Suspension
+
+In cases requiring investigation, TechCorp may place an employee on
+paid administrative leave pending the outcome. Suspension does not
+imply guilt and is not considered a disciplinary action.
+
+========================================================================
+11. HEALTH, SAFETY & WELLNESS
+========================================================================
+
+11.1 Workplace Safety
+
+TechCorp is committed to maintaining a safe and healthy work
+environment. Employees working on-site must:
+  - Follow all posted safety procedures and signage
+  - Report unsafe conditions to Facilities immediately
+  - Participate in emergency drills (fire, earthquake, active threat)
+  - Keep workspaces clean and free of tripping hazards
+
+11.2 Ergonomics
+
+TechCorp provides ergonomic assessments for all employees upon request.
+Remote employees may schedule a virtual ergonomic consultation. The
+company provides standing desk converters and ergonomic accessories
+through the wellness stipend.
+
+11.3 Mental Health Resources
+
+  - Employee Assistance Program (EAP): 8 free counseling sessions per
+    year for employees and family members
+  - Calm/Headspace subscription (free for all employees)
+  - Monthly mental health awareness workshops
+  - Flexible scheduling for therapy appointments
+  - "No Meeting Fridays" to reduce meeting fatigue
+
+11.4 Workplace Violence Prevention
+
+TechCorp has zero tolerance for workplace violence, including:
+  - Physical violence or threats of violence
+  - Intimidation or stalking
+  - Possession of weapons on company premises
+  - Threatening language in any communication (email, chat, verbal)
+
+Report any concerns to HR or anonymously through the Ethics Hotline.
+
+========================================================================
+12. DIVERSITY, EQUITY & INCLUSION
+========================================================================
+
+12.1 Commitment
+
+TechCorp is committed to building a diverse, equitable, and inclusive
+workplace where every employee feels valued, respected, and empowered
+to bring their full self to work. We actively work to identify and
+eliminate barriers to equity in our policies, practices, and culture.
+
+12.2 Employee Resource Groups (ERGs)
+
+TechCorp supports the following ERGs:
+  - TechWomen (women and allies)
+  - TechPride (LGBTQ+ and allies)
+  - TechVets (veterans and military families)
+  - TechAbility (employees with disabilities and allies)
+  - BlackTech (Black employees and allies)
+  - LatinxTech (Latinx employees and allies)
+  - AsianTech (Asian and Pacific Islander employees and allies)
+  - TechParents (working parents and caregivers)
+
+ERGs receive an annual budget from the company and are supported by
+executive sponsors.
+
+12.3 Inclusive Hiring
+
+TechCorp uses structured interviews, diverse hiring panels, and blind
+resume screening to minimize bias in hiring. We set aspirational
+diversity goals and track progress quarterly. All hiring managers
+complete unconscious bias training annually.
+
+12.4 Pay Equity
+
+TechCorp conducts annual pay equity audits across gender, race, and
+ethnicity. Any statistically significant disparities are corrected.
+Results are shared with the executive team and summarized for all
+employees.
+
+========================================================================
+13. GRIEVANCE & COMPLAINT PROCEDURES
+========================================================================
+
+13.1 Reporting Channels
+
+Employees may report concerns through multiple channels:
+  - Direct conversation with their manager
+  - HR Business Partner (hr@techcorp.com)
+  - Ethics Hotline (anonymous, available 24/7): 1-800-ETHIC-TC
+  - Online reporting portal: ethics.techcorp.com
+  - Chief People Officer (for escalations)
+
+13.2 Investigation Process
+
+All complaints are treated confidentially to the extent possible.
+Investigations are conducted by HR or an outside investigator and
+typically include:
+  - Acknowledgment of complaint within 24 hours
+  - Interviews with the complainant, accused, and witnesses
+  - Review of relevant documentation and evidence
+  - Written findings and recommended actions within 30 days
+  - Communication of outcome to the complainant (to the extent
+    permitted by privacy requirements)
+
+13.3 Non-Retaliation
+
+TechCorp strictly prohibits retaliation against anyone who reports a
+concern, files a complaint, or participates in an investigation.
+Retaliation is a separate violation subject to disciplinary action
+up to and including termination.
+
+========================================================================
+14. SEPARATION & OFFBOARDING
+========================================================================
+
+14.1 Voluntary Resignation
+
+Employees who wish to resign are asked to provide at least 2 weeks'
+written notice (4 weeks for directors and above). Notice should be
+submitted to the employee's manager and HR.
+
+14.2 Involuntary Termination
+
+Involuntary termination may result from:
+  - Performance deficiency following a PIP
+  - Violation of company policy
+  - Reduction in force or position elimination
+  - End of contract term (for temporary employees)
+
+TechCorp provides severance packages for employees terminated due to
+reduction in force: 2 weeks of base salary per year of service, with
+a minimum of 4 weeks and a maximum of 26 weeks.
+
+14.3 Offboarding Process
+
+Upon separation, the following occurs:
+  - Final paycheck including accrued, unused PTO (within applicable
+    state timelines)
+  - Return of all company equipment within 5 business days
+  - Revocation of all system access and badge access on the last day
+  - COBRA benefits continuation information mailed within 14 days
+  - Exit interview conducted by HR (optional but encouraged)
+
+14.4 Post-Employment Obligations
+
+Former employees remain bound by:
+  - Confidentiality agreement (indefinite for trade secrets, 3 years
+    for other confidential information)
+  - Non-solicitation of TechCorp employees and customers (12 months)
+  - Invention assignment for work created during employment
+  - Return of all company property and data
+
+========================================================================
+15. ACKNOWLEDGMENT
+========================================================================
+
+By continuing employment at TechCorp, you acknowledge that:
+  - You have received and read this Employee Handbook
+  - You understand the policies, procedures, and expectations
+  - You agree to comply with all policies described herein
+  - You understand this handbook is not a contract of employment
+  - You understand TechCorp may modify these policies at any time
+
+For questions about any policy in this handbook, contact:
+  People Operations: hr@techcorp.com
+  Legal Department: legal@techcorp.com
+  Ethics Hotline: 1-800-ETHIC-TC
+
+========================================================================
+END OF HANDBOOK
+========================================================================
