@@ -87,15 +87,13 @@ EVAL_QUESTIONS = [
     {
         "question": "How long does TechCorp retain transaction records?",
         "ground_truth": (
-            "Transaction records are retained for 7 years for legal and tax "
-            "compliance."
+            "Transaction records are retained for 7 years for legal and tax compliance."
         ),
     },
     {
         "question": "What encryption standards does TechCorp use to protect data?",
         "ground_truth": (
-            "TechCorp uses AES-256 encryption at rest and TLS 1.3 for data in "
-            "transit."
+            "TechCorp uses AES-256 encryption at rest and TLS 1.3 for data in transit."
         ),
     },
     {
