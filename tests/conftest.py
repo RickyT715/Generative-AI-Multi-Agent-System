@@ -12,9 +12,7 @@ def fake_llm():
     """Create a FakeListChatModel for testing without API keys."""
     from langchain_community.chat_models import FakeListChatModel
 
-    return FakeListChatModel(
-        responses=["This is a test response from the fake LLM."]
-    )
+    return FakeListChatModel(responses=["This is a test response from the fake LLM."])
 
 
 @pytest.fixture
@@ -22,9 +20,7 @@ def fake_llm_with_routing():
     """Create a fake LLM that returns structured routing responses."""
     from langchain_community.chat_models import FakeListChatModel
 
-    return FakeListChatModel(
-        responses=['{"datasource": "sql_agent"}']
-    )
+    return FakeListChatModel(responses=['{"datasource": "sql_agent"}'])
 
 
 @pytest.fixture

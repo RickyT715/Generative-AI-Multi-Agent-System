@@ -99,11 +99,19 @@ def generate_refund_policy(output_dir):
 
     pdf.add_section("3. Refund Process")
     pdf.add_body("To request a refund, customers must follow these steps:")
-    pdf.add_bullet("Step 1: Log into your TechCorp account and navigate to Billing > Refund Request")
-    pdf.add_bullet("Step 2: Select the product or subscription for which you want a refund")
+    pdf.add_bullet(
+        "Step 1: Log into your TechCorp account and navigate to Billing > Refund Request"
+    )
+    pdf.add_bullet(
+        "Step 2: Select the product or subscription for which you want a refund"
+    )
     pdf.add_bullet("Step 3: Provide a reason for the refund request")
-    pdf.add_bullet("Step 4: Submit the request. You will receive a confirmation email within 24 hours")
-    pdf.add_bullet("Step 5: Refunds are processed within 5-10 business days to the original payment method")
+    pdf.add_bullet(
+        "Step 4: Submit the request. You will receive a confirmation email within 24 hours"
+    )
+    pdf.add_bullet(
+        "Step 5: Refunds are processed within 5-10 business days to the original payment method"
+    )
 
     pdf.add_section("4. Exceptions and Non-Refundable Items")
     pdf.add_body("The following items and services are non-refundable:")
@@ -155,7 +163,7 @@ def generate_privacy_policy(output_dir):
 
     pdf.add_section("1. Introduction")
     pdf.add_body(
-        "TechCorp Inc. (\"we\", \"us\", or \"our\") respects your privacy and is committed "
+        'TechCorp Inc. ("we", "us", or "our") respects your privacy and is committed '
         "to protecting your personal data. This Privacy Policy explains how we collect, use, "
         "disclose, and safeguard your information when you use our products and services. "
         "This policy applies to all TechCorp products, websites, and services."
@@ -163,36 +171,62 @@ def generate_privacy_policy(output_dir):
 
     pdf.add_section("2. Information We Collect")
     pdf.add_subsection("2.1 Information You Provide")
-    pdf.add_bullet("Account information: name, email address, phone number, billing address")
-    pdf.add_bullet("Payment information: credit card numbers, billing details (processed by secure third-party)")
-    pdf.add_bullet("Profile data: company name, job title, preferences, profile picture")
-    pdf.add_bullet("Communications: support tickets, chat messages, feedback, survey responses")
+    pdf.add_bullet(
+        "Account information: name, email address, phone number, billing address"
+    )
+    pdf.add_bullet(
+        "Payment information: credit card numbers, billing details (processed by secure third-party)"
+    )
+    pdf.add_bullet(
+        "Profile data: company name, job title, preferences, profile picture"
+    )
+    pdf.add_bullet(
+        "Communications: support tickets, chat messages, feedback, survey responses"
+    )
     pdf.add_bullet("Content: files, documents, and data you upload to our services")
 
     pdf.add_subsection("2.2 Information Collected Automatically")
-    pdf.add_bullet("Device information: IP address, browser type, operating system, device identifiers")
-    pdf.add_bullet("Usage data: features used, pages visited, time spent, click patterns")
+    pdf.add_bullet(
+        "Device information: IP address, browser type, operating system, device identifiers"
+    )
+    pdf.add_bullet(
+        "Usage data: features used, pages visited, time spent, click patterns"
+    )
     pdf.add_bullet("Log data: access times, error logs, referring URLs, search queries")
-    pdf.add_bullet("Cookies and tracking: session cookies, analytics cookies, preference cookies")
+    pdf.add_bullet(
+        "Cookies and tracking: session cookies, analytics cookies, preference cookies"
+    )
 
     pdf.add_section("3. How We Use Your Information")
     pdf.add_body("We use collected information for the following purposes:")
     pdf.add_bullet("Provide, maintain, and improve our products and services")
     pdf.add_bullet("Process transactions and send billing notifications")
-    pdf.add_bullet("Send technical notices, updates, security alerts, and support messages")
+    pdf.add_bullet(
+        "Send technical notices, updates, security alerts, and support messages"
+    )
     pdf.add_bullet("Respond to customer service requests and support needs")
     pdf.add_bullet("Monitor and analyze trends, usage, and activities")
-    pdf.add_bullet("Detect, investigate, and prevent fraudulent or unauthorized activities")
+    pdf.add_bullet(
+        "Detect, investigate, and prevent fraudulent or unauthorized activities"
+    )
     pdf.add_bullet("Personalize and improve your experience")
     pdf.add_bullet("Comply with legal obligations and enforce our terms")
 
     pdf.add_section("4. Data Sharing and Disclosure")
     pdf.add_body("We do not sell your personal information. We may share data with:")
-    pdf.add_bullet("Service providers: cloud hosting, payment processing, analytics, email delivery")
+    pdf.add_bullet(
+        "Service providers: cloud hosting, payment processing, analytics, email delivery"
+    )
     pdf.add_bullet("Business partners: with your consent, for integrated services")
-    pdf.add_bullet("Legal requirements: when required by law, regulation, or legal process")
-    pdf.add_bullet("Business transfers: in connection with mergers, acquisitions, or asset sales")
-    pdf.add_bullet("With your consent: for any other purpose with your explicit permission")
+    pdf.add_bullet(
+        "Legal requirements: when required by law, regulation, or legal process"
+    )
+    pdf.add_bullet(
+        "Business transfers: in connection with mergers, acquisitions, or asset sales"
+    )
+    pdf.add_bullet(
+        "With your consent: for any other purpose with your explicit permission"
+    )
 
     pdf.add_section("5. Data Retention")
     pdf.add_body(
@@ -211,8 +245,12 @@ def generate_privacy_policy(output_dir):
     pdf.add_bullet("Right to Access: request a copy of your personal data")
     pdf.add_bullet("Right to Rectification: correct inaccurate or incomplete data")
     pdf.add_bullet("Right to Erasure: request deletion of your personal data")
-    pdf.add_bullet("Right to Portability: receive your data in a structured, machine-readable format")
-    pdf.add_bullet("Right to Object: object to processing of your data for certain purposes")
+    pdf.add_bullet(
+        "Right to Portability: receive your data in a structured, machine-readable format"
+    )
+    pdf.add_bullet(
+        "Right to Object: object to processing of your data for certain purposes"
+    )
     pdf.add_bullet("Right to Restrict: request restriction of processing")
     pdf.add_bullet("Right to Withdraw Consent: withdraw consent at any time")
 
@@ -256,7 +294,7 @@ def generate_terms_of_service(output_dir):
     pdf.add_section("1. Acceptance of Terms")
     pdf.add_body(
         "By accessing or using any TechCorp Inc. product or service, you agree to be bound "
-        "by these Terms of Service (\"Terms\"). If you are using our services on behalf of an "
+        'by these Terms of Service ("Terms"). If you are using our services on behalf of an '
         "organization, you represent that you have the authority to bind that organization to "
         "these Terms. If you do not agree to these Terms, you may not access or use our services."
     )
@@ -264,10 +302,16 @@ def generate_terms_of_service(output_dir):
     pdf.add_section("2. Account Terms")
     pdf.add_bullet("You must be at least 18 years old to create an account")
     pdf.add_bullet("You must provide accurate and complete registration information")
-    pdf.add_bullet("You are responsible for maintaining the security of your account credentials")
-    pdf.add_bullet("You must notify us immediately of any unauthorized access to your account")
+    pdf.add_bullet(
+        "You are responsible for maintaining the security of your account credentials"
+    )
+    pdf.add_bullet(
+        "You must notify us immediately of any unauthorized access to your account"
+    )
     pdf.add_bullet("One person or entity may not maintain more than one free account")
-    pdf.add_bullet("You may not use our services for any illegal or unauthorized purpose")
+    pdf.add_bullet(
+        "You may not use our services for any illegal or unauthorized purpose"
+    )
 
     pdf.add_section("3. Subscription Plans and Billing")
     pdf.add_subsection("3.1 Plan Types")
@@ -292,12 +336,20 @@ def generate_terms_of_service(output_dir):
     pdf.add_body("You agree not to use our services to:")
     pdf.add_bullet("Violate any applicable laws, regulations, or third-party rights")
     pdf.add_bullet("Upload or transmit viruses, malware, or other malicious code")
-    pdf.add_bullet("Attempt to gain unauthorized access to our systems or other user accounts")
-    pdf.add_bullet("Interfere with or disrupt the integrity or performance of our services")
-    pdf.add_bullet("Use our services for cryptocurrency mining or similar resource-intensive activities")
+    pdf.add_bullet(
+        "Attempt to gain unauthorized access to our systems or other user accounts"
+    )
+    pdf.add_bullet(
+        "Interfere with or disrupt the integrity or performance of our services"
+    )
+    pdf.add_bullet(
+        "Use our services for cryptocurrency mining or similar resource-intensive activities"
+    )
     pdf.add_bullet("Scrape, crawl, or spider our services without written permission")
     pdf.add_bullet("Resell or redistribute our services without authorization")
-    pdf.add_bullet("Send spam, phishing, or other unsolicited communications through our platform")
+    pdf.add_bullet(
+        "Send spam, phishing, or other unsolicited communications through our platform"
+    )
 
     pdf.add_section("5. Intellectual Property")
     pdf.add_body(

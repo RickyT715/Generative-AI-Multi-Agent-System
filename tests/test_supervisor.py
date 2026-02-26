@@ -27,7 +27,7 @@ class TestRouteQuery:
     def test_route_query_invalid(self):
         from src.agents.supervisor import RouteQuery
 
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             RouteQuery(datasource="invalid_agent")
 
 

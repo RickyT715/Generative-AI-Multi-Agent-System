@@ -33,8 +33,8 @@ def main():
 
     print("=" * 50)
     print("Setup complete!")
-    print(f"  - SQLite database: data/customer_support.db")
-    print(f"  - Policy PDFs: data/documents/")
+    print("  - SQLite database: data/customer_support.db")
+    print("  - Policy PDFs: data/documents/")
     print(f"  - ChromaDB index: {num_chunks} chunks indexed")
     print("=" * 50)
 

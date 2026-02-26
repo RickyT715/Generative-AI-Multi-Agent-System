@@ -50,7 +50,11 @@ class TestDataGeneration:
         assert all("price" in p for p in products)
 
     def test_generate_tickets(self):
-        from data.seed.generate_data import generate_customers, generate_products, generate_tickets
+        from data.seed.generate_data import (
+            generate_customers,
+            generate_products,
+            generate_tickets,
+        )
 
         customers = generate_customers(10)
         products = generate_products()

@@ -34,7 +34,9 @@ def _make_agent_node(agent_graph):
 
         if last_message is not None:
             return {"messages": [last_message]}
-        return {"messages": [AIMessage(content="I was unable to process your request.")]}
+        return {
+            "messages": [AIMessage(content="I was unable to process your request.")]
+        }
 
     return node_fn
 
