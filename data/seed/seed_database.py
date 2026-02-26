@@ -69,9 +69,15 @@ def seed_database(db_path="data/customer_support.db"):
            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         [
             (
-                c["customer_id"], c["name"], c["email"], c["phone"],
-                c["account_type"], c["subscription_tier"], c["join_date"],
-                c["address"], c["account_status"],
+                c["customer_id"],
+                c["name"],
+                c["email"],
+                c["phone"],
+                c["account_type"],
+                c["subscription_tier"],
+                c["join_date"],
+                c["address"],
+                c["account_status"],
             )
             for c in data["customers"]
         ],
@@ -84,8 +90,11 @@ def seed_database(db_path="data/customer_support.db"):
            VALUES (?, ?, ?, ?, ?)""",
         [
             (
-                p["product_id"], p["name"], p["category"],
-                p["price"], p["description"],
+                p["product_id"],
+                p["name"],
+                p["category"],
+                p["price"],
+                p["description"],
             )
             for p in data["products"]
         ],
@@ -100,10 +109,18 @@ def seed_database(db_path="data/customer_support.db"):
            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         [
             (
-                t["ticket_id"], t["customer_id"], t["subject"],
-                t["description"], t["category"], t["priority"],
-                t["status"], t["channel"], t["assigned_agent"],
-                t["created_at"], t["resolved_at"], t["resolution"],
+                t["ticket_id"],
+                t["customer_id"],
+                t["subject"],
+                t["description"],
+                t["category"],
+                t["priority"],
+                t["status"],
+                t["channel"],
+                t["assigned_agent"],
+                t["created_at"],
+                t["resolved_at"],
+                t["resolution"],
                 t["satisfaction_rating"],
             )
             for t in data["tickets"]

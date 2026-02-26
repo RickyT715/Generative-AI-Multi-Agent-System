@@ -26,21 +26,56 @@ AGENTS = [
 ]
 
 PRODUCT_CATALOG = [
-    ("CloudSync Pro", "cloud_storage", 29.99, "Enterprise cloud storage and sync solution with 1TB storage"),
-    ("SecureVault", "security", 49.99, "Advanced cybersecurity suite with real-time threat detection"),
-    ("DataFlow Analytics", "analytics", 79.99, "Business intelligence and data analytics platform"),
-    ("TeamChat Plus", "communication", 12.99, "Team messaging and video conferencing tool"),
-    ("AutoBackup", "backup", 19.99, "Automated backup solution for files and databases"),
+    (
+        "CloudSync Pro",
+        "cloud_storage",
+        29.99,
+        "Enterprise cloud storage and sync solution with 1TB storage",
+    ),
+    (
+        "SecureVault",
+        "security",
+        49.99,
+        "Advanced cybersecurity suite with real-time threat detection",
+    ),
+    (
+        "DataFlow Analytics",
+        "analytics",
+        79.99,
+        "Business intelligence and data analytics platform",
+    ),
+    (
+        "TeamChat Plus",
+        "communication",
+        12.99,
+        "Team messaging and video conferencing tool",
+    ),
+    (
+        "AutoBackup",
+        "backup",
+        19.99,
+        "Automated backup solution for files and databases",
+    ),
     ("APIConnect", "developer_tools", 39.99, "API management and integration platform"),
     ("SmartDocs", "productivity", 9.99, "AI-powered document management system"),
     ("NetMonitor", "networking", 59.99, "Network monitoring and performance analytics"),
-    ("CodeDeploy", "developer_tools", 34.99, "CI/CD pipeline and deployment automation"),
+    (
+        "CodeDeploy",
+        "developer_tools",
+        34.99,
+        "CI/CD pipeline and deployment automation",
+    ),
     ("MailGuard", "security", 24.99, "Email security and anti-phishing solution"),
     ("CloudSync Basic", "cloud_storage", 9.99, "Basic cloud storage with 100GB space"),
     ("TaskMaster", "productivity", 14.99, "Project management and task tracking tool"),
     ("DataVault", "backup", 44.99, "Enterprise-grade data backup and recovery"),
     ("InsightAI", "analytics", 99.99, "AI-powered predictive analytics platform"),
-    ("SecureConnect VPN", "security", 15.99, "Business VPN with enterprise-level encryption"),
+    (
+        "SecureConnect VPN",
+        "security",
+        15.99,
+        "Business VPN with enterprise-level encryption",
+    ),
 ]
 
 TICKET_TEMPLATES = {
@@ -118,21 +153,23 @@ def generate_customers(n=100):
     """Generate n synthetic customer records."""
     customers = []
     for i in range(1, n + 1):
-        customers.append({
-            "customer_id": i,
-            "name": fake.name(),
-            "email": fake.unique.email(),
-            "phone": fake.phone_number(),
-            "account_type": random.choice(ACCOUNT_TYPES),
-            "subscription_tier": random.choice(SUBSCRIPTION_TIERS),
-            "join_date": fake.date_between(
-                start_date="-3y", end_date="today"
-            ).isoformat(),
-            "address": fake.address().replace("\n", ", "),
-            "account_status": random.choices(
-                ACCOUNT_STATUSES, weights=[0.8, 0.15, 0.05]
-            )[0],
-        })
+        customers.append(
+            {
+                "customer_id": i,
+                "name": fake.name(),
+                "email": fake.unique.email(),
+                "phone": fake.phone_number(),
+                "account_type": random.choice(ACCOUNT_TYPES),
+                "subscription_tier": random.choice(SUBSCRIPTION_TIERS),
+                "join_date": fake.date_between(
+                    start_date="-3y", end_date="today"
+                ).isoformat(),
+                "address": fake.address().replace("\n", ", "),
+                "account_status": random.choices(
+                    ACCOUNT_STATUSES, weights=[0.8, 0.15, 0.05]
+                )[0],
+            }
+        )
     return customers
 
 
@@ -140,13 +177,15 @@ def generate_products():
     """Generate product catalog."""
     products = []
     for i, (name, category, price, description) in enumerate(PRODUCT_CATALOG, 1):
-        products.append({
-            "product_id": i,
-            "name": name,
-            "category": category,
-            "price": price,
-            "description": description,
-        })
+        products.append(
+            {
+                "product_id": i,
+                "name": name,
+                "category": category,
+                "price": price,
+                "description": description,
+            }
+        )
     return products
 
 
@@ -157,12 +196,8 @@ def generate_tickets(customers, products, n=500):
         customer = random.choice(customers)
         product = random.choice(products)
         category = random.choice(TICKET_CATEGORIES)
-        status = random.choices(
-            TICKET_STATUSES, weights=[0.15, 0.15, 0.5, 0.2]
-        )[0]
-        priority = random.choices(
-            TICKET_PRIORITIES, weights=[0.3, 0.4, 0.2, 0.1]
-        )[0]
+        status = random.choices(TICKET_STATUSES, weights=[0.15, 0.15, 0.5, 0.2])[0]
+        priority = random.choices(TICKET_PRIORITIES, weights=[0.3, 0.4, 0.2, 0.1])[0]
 
         created_at = fake.date_time_between(start_date="-1y", end_date="now")
         resolved_at = None
@@ -170,9 +205,7 @@ def generate_tickets(customers, products, n=500):
         satisfaction = None
 
         if status in ("resolved", "closed"):
-            resolved_at = created_at + timedelta(
-                hours=random.randint(1, 168)
-            )
+            resolved_at = created_at + timedelta(hours=random.randint(1, 168))
             resolution = random.choice(RESOLUTIONS[category]).format(
                 amount=product["price"]
             )
@@ -201,27 +234,44 @@ def generate_tickets(customers, products, n=500):
         )
 
         subject_prefixes = {
-            "billing": ["Billing Issue", "Refund Request", "Invoice Question", "Payment Problem"],
-            "technical": ["Technical Issue", "Bug Report", "Error", "Performance Problem"],
-            "account": ["Account Update", "Account Question", "Access Request", "Account Change"],
+            "billing": [
+                "Billing Issue",
+                "Refund Request",
+                "Invoice Question",
+                "Payment Problem",
+            ],
+            "technical": [
+                "Technical Issue",
+                "Bug Report",
+                "Error",
+                "Performance Problem",
+            ],
+            "account": [
+                "Account Update",
+                "Account Question",
+                "Access Request",
+                "Account Change",
+            ],
             "complaint": ["Complaint", "Escalation", "Service Issue", "Urgent Concern"],
         }
 
-        tickets.append({
-            "ticket_id": i,
-            "customer_id": customer["customer_id"],
-            "subject": f"{random.choice(subject_prefixes[category])}: {product['name']}",
-            "description": description,
-            "category": category,
-            "priority": priority,
-            "status": status,
-            "channel": random.choice(TICKET_CHANNELS),
-            "assigned_agent": random.choice(AGENTS),
-            "created_at": created_at.isoformat(),
-            "resolved_at": resolved_at.isoformat() if resolved_at else None,
-            "resolution": resolution,
-            "satisfaction_rating": satisfaction,
-        })
+        tickets.append(
+            {
+                "ticket_id": i,
+                "customer_id": customer["customer_id"],
+                "subject": f"{random.choice(subject_prefixes[category])}: {product['name']}",
+                "description": description,
+                "category": category,
+                "priority": priority,
+                "status": status,
+                "channel": random.choice(TICKET_CHANNELS),
+                "assigned_agent": random.choice(AGENTS),
+                "created_at": created_at.isoformat(),
+                "resolved_at": resolved_at.isoformat() if resolved_at else None,
+                "resolution": resolution,
+                "satisfaction_rating": satisfaction,
+            }
+        )
     return tickets
 
 

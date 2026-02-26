@@ -38,7 +38,7 @@ def lookup_customer(customer_name: str) -> str:
 
     results = []
     for row in rows:
-        customer = dict(zip(columns, row))
+        customer = dict(zip(columns, row, strict=False))
         results.append(
             f"Customer ID: {customer['customer_id']}\n"
             f"Name: {customer['name']}\n"
@@ -75,7 +75,7 @@ def get_ticket_history(customer_id: int) -> str:
 
     results = []
     for row in rows:
-        ticket = dict(zip(columns, row))
+        ticket = dict(zip(columns, row, strict=False))
         results.append(
             f"Ticket #{ticket['ticket_id']}: {ticket['subject']}\n"
             f"  Category: {ticket['category']} | Priority: {ticket['priority']}\n"
@@ -108,9 +108,7 @@ def create_ticket(
     cursor = conn.cursor()
 
     # Verify customer exists
-    cursor.execute(
-        "SELECT name FROM customers WHERE customer_id = ?", (customer_id,)
-    )
+    cursor.execute("SELECT name FROM customers WHERE customer_id = ?", (customer_id,))
     customer = cursor.fetchone()
     if not customer:
         conn.close()

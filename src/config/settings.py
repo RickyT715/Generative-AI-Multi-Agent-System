@@ -33,9 +33,7 @@ def get_embedding_model():
     """Get the HuggingFace embedding model for vector store operations."""
     from langchain_huggingface import HuggingFaceEmbeddings
 
-    model_name = os.getenv(
-        "EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
-    )
+    model_name = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
     return HuggingFaceEmbeddings(model_name=model_name)
 
 
@@ -48,7 +46,5 @@ def get_chroma_settings():
     """Get ChromaDB configuration from environment."""
     return {
         "persist_directory": os.getenv("CHROMA_PERSIST_DIR", "data/chroma"),
-        "collection_name": os.getenv(
-            "CHROMA_COLLECTION_NAME", "policy_documents"
-        ),
+        "collection_name": os.getenv("CHROMA_COLLECTION_NAME", "policy_documents"),
     }

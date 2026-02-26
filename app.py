@@ -199,9 +199,7 @@ if prompt := st.chat_input("How can I help you today?"):
             st.session_state.last_agent = result.get("query_category", "unknown")
 
             # Display assistant response
-            st.session_state.messages.append(
-                {"role": "assistant", "content": response}
-            )
+            st.session_state.messages.append({"role": "assistant", "content": response})
             with st.chat_message("assistant"):
                 st.markdown(response)
 
