@@ -14,12 +14,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 os.environ.setdefault("HF_HOME", str(PROJECT_ROOT / ".hf_cache"))
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv  # noqa: E402
 
 load_dotenv(PROJECT_ROOT / ".env")
 
 # Import after env setup — instrumented_test wraps stdout/stderr on import
-from scripts.instrumented_test import LLMCallTracker, run_single_question
+from scripts.instrumented_test import LLMCallTracker, run_single_question  # noqa: E402
 
 QUESTIONS = [
     # SQL (3)
@@ -100,7 +100,9 @@ def main():
         metrics = run_single_question(graph, q["question"], tracker)
 
         match = "OK" if metrics["query_category"] == q["expected_agent"] else "MISMATCH"
-        print(f"  Route: {metrics['query_category']} (expected: {q['expected_agent']}) [{match}]")
+        print(
+            f"  Route: {metrics['query_category']} (expected: {q['expected_agent']}) [{match}]"
+        )
         print(
             f"  LLM calls: {metrics['num_llm_calls']} | "
             f"Time: {metrics['total_time']:.1f}s | "
@@ -124,16 +126,22 @@ def main():
         if r["metrics"]["query_category"] != r["question_data"]["expected_agent"]
     ]
 
-    print(f"\n  Total: {total_calls} LLM calls | {total_tokens:,} tokens | {total_time:.1f}s")
+    print(
+        f"\n  Total: {total_calls} LLM calls | {total_tokens:,} tokens | {total_time:.1f}s"
+    )
     print(f"  Average: {total_calls / len(results):.1f} calls/question")
     print(f"  Routing mismatches: {len(mismatches)}")
     for m in mismatches:
         q = m["question_data"]
-        print(f"    Q{q['id']}: expected={q['expected_agent']}, got={m['metrics']['query_category']}")
+        print(
+            f"    Q{q['id']}: expected={q['expected_agent']}, got={m['metrics']['query_category']}"
+        )
 
-    print(f"\n  Per-question breakdown:")
-    print(f"  {'ID':>3} | {'Expected':>12} | {'Actual':>12} | {'Calls':>5} | {'Time':>6} | {'Match':>5}")
-    print(f"  " + "-" * 60)
+    print("\n  Per-question breakdown:")
+    print(
+        f"  {'ID':>3} | {'Expected':>12} | {'Actual':>12} | {'Calls':>5} | {'Time':>6} | {'Match':>5}"
+    )
+    print("  " + "-" * 60)
     for r in results:
         q = r["question_data"]
         m = r["metrics"]

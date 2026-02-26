@@ -40,8 +40,9 @@ graph TD
 - **Text-to-SQL**: Natural language queries translated to SQL against customer/ticket/product data
 - **RAG (Retrieval-Augmented Generation)**: Policy document search with citation-backed answers
 - **MCP Integration**: FastMCP server exposing customer support tools via Model Context Protocol
-- **Multi-Provider LLM Support**: Switch between Anthropic Claude, OpenAI GPT-4o, or Google Gemini with one config change
-- **PDF Upload**: Runtime document ingestion via the Streamlit sidebar
+- **Multi-Provider LLM Support**: Switch between Anthropic Claude, OpenAI GPT-4o, or Google Gemini — configurable from the sidebar with curated model dropdowns and custom model input
+- **Persistent Settings**: Provider, model, temperature, and API keys saved to `.env` from the UI — survives page reloads
+- **File Upload Pipeline**: Upload CSV, PDF, or TXT files via the sidebar — CSVs are auto-detected and inserted into the SQL database; PDF/TXT files are indexed into the vector store
 - **Conversation Memory**: Thread-based conversation persistence via LangGraph checkpointer
 - **Fully Self-Contained**: Synthetic data generation — no external data downloads needed
 
@@ -88,7 +89,7 @@ docker compose up --build
 
 ## Configuration
 
-All configuration is done via the `.env` file:
+Settings can be changed from the **Streamlit sidebar** (Configuration panel) and persisted by clicking **Save Settings**. This writes values back to the `.env` file, so they survive page reloads. You can also edit `.env` directly:
 
 | Variable | Description | Default |
 |----------|-------------|---------|
@@ -128,6 +129,8 @@ Generative-AI-Multi-Agent-System/
 │   │   ├── sql_tools.py     # SQLDatabaseToolkit wrapper
 │   │   ├── retrieval_tools.py # Vector search tool
 │   │   └── mcp_tools.py     # MCP client integration
+│   ├── processing/
+│   │   └── file_processor.py # CSV/PDF/TXT upload & ingestion pipeline
 │   ├── config/
 │   │   └── settings.py      # LLM factory, env config
 │   ├── db/

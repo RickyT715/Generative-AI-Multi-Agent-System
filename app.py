@@ -4,7 +4,7 @@ import os
 import uuid
 
 import streamlit as st
-from dotenv import load_dotenv
+from dotenv import load_dotenv, set_key
 
 load_dotenv()
 
@@ -34,25 +34,103 @@ init_session_state()
 with st.sidebar:
     st.header("Configuration")
 
-    # LLM Provider
+    # Known models per provider
+    PROVIDER_MODELS = {
+        "anthropic": ["claude-sonnet-4-5-20250929", "claude-haiku-4-5-20251001"],
+        "openai": ["gpt-4o", "gpt-4o-mini", "o3-mini"],
+        "google": ["gemini-2.5-flash", "gemini-2.5-pro"],
+    }
+    PROVIDERS = list(PROVIDER_MODELS.keys())
+
+    # Load persisted values from .env as defaults
+    env_provider = os.getenv("LLM_PROVIDER", "anthropic")
+    env_model = os.getenv("LLM_MODEL", "")
+    try:
+        env_temperature = float(os.getenv("LLM_TEMPERATURE", "0.0"))
+    except ValueError:
+        env_temperature = 0.0
+
+    # Provider selector
     provider = st.selectbox(
         "LLM Provider",
-        ["anthropic", "openai", "google"],
-        index=["anthropic", "openai", "google"].index(
-            os.getenv("LLM_PROVIDER", "anthropic")
-        ),
+        PROVIDERS,
+        index=PROVIDERS.index(env_provider) if env_provider in PROVIDERS else 0,
     )
 
-    # Model name
-    default_models = {
-        "anthropic": "claude-sonnet-4-5-20250929",
-        "openai": "gpt-4o",
-        "google": "gemini-2.5-flash",
-    }
-    model_name = st.text_input("Model Name", value=default_models.get(provider, ""))
+    # Model selector with Custom option
+    models = PROVIDER_MODELS[provider]
+    model_options = models + ["Custom..."]
+
+    if env_model in models:
+        default_model_index = models.index(env_model)
+    elif env_model and provider == env_provider:
+        default_model_index = len(models)  # "Custom..."
+    else:
+        default_model_index = 0
+
+    selected_model = st.selectbox(
+        "Model",
+        model_options,
+        index=default_model_index,
+        key=f"model_select_{provider}",
+    )
+
+    if selected_model == "Custom...":
+        model_name = st.text_input(
+            "Custom Model Name",
+            value=env_model
+            if (env_model not in models and provider == env_provider)
+            else "",
+        )
+    else:
+        model_name = selected_model
 
     # Temperature
-    temperature = st.slider("Temperature", 0.0, 1.0, 0.0, 0.1)
+    temperature = st.slider("Temperature", 0.0, 1.0, env_temperature, 0.1)
+
+    # API Key inputs
+    st.subheader("API Keys")
+
+    API_KEY_VARS = {
+        "anthropic": "ANTHROPIC_API_KEY",
+        "openai": "OPENAI_API_KEY",
+        "google": "GOOGLE_API_KEY",
+    }
+
+    api_key_inputs = {}
+    for prov, env_var in API_KEY_VARS.items():
+        existing = os.getenv(env_var, "")
+        if existing:
+            masked = existing[:6] + "..." + existing[-4:]
+        else:
+            masked = ""
+
+        label = f"{prov.title()} API Key"
+        if prov == provider and existing:
+            label += " \u2705"
+
+        api_key_inputs[env_var] = st.text_input(
+            label,
+            value="",
+            type="password",
+            placeholder=masked or "Enter API key",
+            key=f"api_key_{prov}",
+        )
+
+    # Save Settings button
+    if st.button("Save Settings", type="primary"):
+        env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+        set_key(env_path, "LLM_PROVIDER", provider)
+        set_key(env_path, "LLM_MODEL", model_name)
+        set_key(env_path, "LLM_TEMPERATURE", str(temperature))
+
+        for env_var, new_key in api_key_inputs.items():
+            if new_key.strip():
+                set_key(env_path, env_var, new_key.strip())
+
+        load_dotenv(override=True)
+        st.cache_resource.clear()
+        st.success("Settings saved!")
 
     st.divider()
 
