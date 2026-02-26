@@ -88,8 +88,18 @@ with st.sidebar:
     # Temperature
     temperature = st.slider("Temperature", 0.0, 1.0, env_temperature, 0.1)
 
-    # API Key inputs
-    st.subheader("API Keys")
+    # API Key inputs — use text type with CSS masking to prevent Chrome autofill.
+    # Using type="password" causes Chrome to offer "Use a strong password", so we
+    # use a regular text input and mask characters with CSS -webkit-text-security.
+    st.markdown(
+        """<style>
+        div[data-testid="stExpander"] div[data-testid="stTextInputRootElement"] input {
+            -webkit-text-security: disc;
+            text-security: disc;
+        }
+        </style>""",
+        unsafe_allow_html=True,
+    )
 
     API_KEY_VARS = {
         "anthropic": "ANTHROPIC_API_KEY",
@@ -98,24 +108,24 @@ with st.sidebar:
     }
 
     api_key_inputs = {}
-    for prov, env_var in API_KEY_VARS.items():
-        existing = os.getenv(env_var, "")
-        if existing:
-            masked = existing[:6] + "..." + existing[-4:]
-        else:
-            masked = ""
+    with st.expander("API Keys", expanded=False):
+        for prov, env_var in API_KEY_VARS.items():
+            existing = os.getenv(env_var, "")
+            if existing:
+                masked = existing[:6] + "..." + existing[-4:]
+            else:
+                masked = ""
 
-        label = f"{prov.title()} API Key"
-        if prov == provider and existing:
-            label += " \u2705"
+            label = f"{prov.title()} API Key"
+            if prov == provider and existing:
+                label += " \u2705"
 
-        api_key_inputs[env_var] = st.text_input(
-            label,
-            value="",
-            type="password",
-            placeholder=masked or "Enter API key",
-            key=f"api_key_{prov}",
-        )
+            api_key_inputs[env_var] = st.text_input(
+                label,
+                value="",
+                placeholder=masked or "Enter API key",
+                key=f"api_key_{prov}",
+            )
 
     # Save Settings button
     if st.button("Save Settings", type="primary"):
