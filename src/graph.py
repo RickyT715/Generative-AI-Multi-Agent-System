@@ -20,7 +20,11 @@ def _make_agent_node(agent_graph):
     """
 
     def node_fn(state):
-        result = agent_graph.invoke({"messages": state["messages"]})
+        # Limit tool-call loops to prevent runaway retrieval (default is 10,000).
+        result = agent_graph.invoke(
+            {"messages": state["messages"]},
+            {"recursion_limit": 10},
+        )
         # Extract the last AI message from the agent's response
         agent_messages = result.get("messages", [])
         last_message = None

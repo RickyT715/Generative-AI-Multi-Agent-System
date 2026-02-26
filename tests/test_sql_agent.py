@@ -13,25 +13,20 @@ class TestSQLTools:
         db = SQLDatabase.from_uri(f"sqlite:///{temp_sqlite_db}")
         tools = get_sql_tools(fake_llm, db=db)
 
-        assert len(tools) == 4
-        tool_names = {t.name for t in tools}
-        assert "sql_db_list_tables" in tool_names
-        assert "sql_db_schema" in tool_names
-        assert "sql_db_query" in tool_names
-        assert "sql_db_query_checker" in tool_names
+        # Only sql_db_query is returned; schema is embedded in the prompt
+        # and query_checker (hidden LLM call) is removed.
+        assert len(tools) == 1
+        assert tools[0].name == "sql_db_query"
 
-    def test_list_tables_tool(self, fake_llm, temp_sqlite_db):
-        from src.tools.sql_tools import get_sql_tools
+    def test_get_db_schema(self, fake_llm, temp_sqlite_db):
+        from src.tools.sql_tools import get_db_schema
 
         db = SQLDatabase.from_uri(f"sqlite:///{temp_sqlite_db}")
-        tools = get_sql_tools(fake_llm, db=db)
+        schema = get_db_schema(db=db)
 
-        list_tables = next(t for t in tools if t.name == "sql_db_list_tables")
-        result = list_tables.invoke("")
-
-        assert "customers" in result
-        assert "products" in result
-        assert "tickets" in result
+        assert "customers" in schema
+        assert "products" in schema
+        assert "tickets" in schema
 
     def test_query_tool(self, fake_llm, temp_sqlite_db):
         from src.tools.sql_tools import get_sql_tools

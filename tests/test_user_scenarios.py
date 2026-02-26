@@ -124,16 +124,13 @@ class TestAgentNodeWrapper:
 class TestSQLToolExecution:
     """Test SQL tool execution with real database."""
 
-    def test_schema_tool_returns_columns(self, fake_llm, temp_sqlite_db):
+    def test_schema_returns_columns(self, fake_llm, temp_sqlite_db):
         from langchain_community.utilities import SQLDatabase
 
-        from src.tools.sql_tools import get_sql_tools
+        from src.tools.sql_tools import get_db_schema
 
         db = SQLDatabase.from_uri(f"sqlite:///{temp_sqlite_db}")
-        tools = get_sql_tools(fake_llm, db=db)
-
-        schema_tool = next(t for t in tools if t.name == "sql_db_schema")
-        result = schema_tool.invoke("customers")
+        result = get_db_schema(db=db)
 
         assert "customer_id" in result
         assert "name" in result

@@ -2,8 +2,8 @@
 
 from langchain.agents import create_agent
 
-from src.prompts.sql_agent import SQL_AGENT_PROMPT
-from src.tools.sql_tools import get_sql_tools
+from src.prompts.sql_agent import get_sql_agent_prompt
+from src.tools.sql_tools import get_db_schema, get_sql_tools
 
 
 def create_sql_agent_graph(llm, db=None):
@@ -17,10 +17,12 @@ def create_sql_agent_graph(llm, db=None):
         Compiled agent graph.
     """
     tools = get_sql_tools(llm, db)
+    schema = get_db_schema(db)
+    prompt = get_sql_agent_prompt(schema)
 
     return create_agent(
         llm,
         tools=tools,
-        system_prompt=SQL_AGENT_PROMPT,
+        system_prompt=prompt,
         name="sql_agent",
     )
