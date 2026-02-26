@@ -3,6 +3,7 @@
 import os
 
 from fpdf import FPDF
+from fpdf.enums import XPos, YPos
 
 
 class PolicyPDF(FPDF):
@@ -11,7 +12,14 @@ class PolicyPDF(FPDF):
     def header(self):
         self.set_font("Helvetica", "B", 10)
         self.set_text_color(100, 100, 100)
-        self.cell(0, 10, "TechCorp Inc. - Confidential", align="C", ln=True)
+        self.cell(
+            0,
+            10,
+            "TechCorp Inc. - Confidential",
+            align="C",
+            new_x=XPos.LMARGIN,
+            new_y=YPos.NEXT,
+        )
         self.ln(2)
 
     def footer(self):
@@ -23,25 +31,39 @@ class PolicyPDF(FPDF):
     def add_title(self, title):
         self.set_font("Helvetica", "B", 18)
         self.set_text_color(0, 51, 102)
-        self.cell(0, 15, title, ln=True, align="C")
+        self.cell(
+            0,
+            15,
+            title,
+            new_x=XPos.LMARGIN,
+            new_y=YPos.NEXT,
+            align="C",
+        )
         self.ln(5)
 
     def add_subtitle(self, text):
         self.set_font("Helvetica", "I", 11)
         self.set_text_color(80, 80, 80)
-        self.cell(0, 8, text, ln=True, align="C")
+        self.cell(
+            0,
+            8,
+            text,
+            new_x=XPos.LMARGIN,
+            new_y=YPos.NEXT,
+            align="C",
+        )
         self.ln(8)
 
     def add_section(self, title):
         self.set_font("Helvetica", "B", 14)
         self.set_text_color(0, 51, 102)
-        self.cell(0, 10, title, ln=True)
+        self.cell(0, 10, title, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.ln(3)
 
     def add_subsection(self, title):
         self.set_font("Helvetica", "B", 12)
         self.set_text_color(51, 51, 51)
-        self.cell(0, 8, title, ln=True)
+        self.cell(0, 8, title, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.ln(2)
 
     def add_body(self, text):
