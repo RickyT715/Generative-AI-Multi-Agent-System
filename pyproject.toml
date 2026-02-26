@@ -1,0 +1,37 @@
+[project]
+name = "generative-ai-multi-agent-system"
+version = "1.0.0"
+description = "Generative AI Multi-Agent Customer Support System"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "B", "UP", "S"]
+ignore = [
+    "S101",   # assert used in tests
+    "S603",   # subprocess call
+    "S607",   # partial executable path
+    "E501",   # line too long (handled by formatter)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101", "S106"]
+"data/seed/**/*.py" = ["S311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: marks tests that require external services",
+    "slow: marks tests that take a long time to run",
+]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
