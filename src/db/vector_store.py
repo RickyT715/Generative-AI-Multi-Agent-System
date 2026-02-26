@@ -74,3 +74,42 @@ def add_pdf_files(file_paths, chunk_size=512, chunk_overlap=50):
         return 0
 
     return add_documents(all_docs, chunk_size, chunk_overlap)
+
+
+def add_text_files(file_paths, chunk_size=512, chunk_overlap=50):
+    """Process plain text files and add to vector store.
+
+    Args:
+        file_paths: List of paths to .txt files
+        chunk_size: Size of text chunks
+        chunk_overlap: Overlap between chunks
+
+    Returns:
+        Number of chunks indexed
+    """
+    from langchain_community.document_loaders import TextLoader
+
+    all_docs = []
+    for path in file_paths:
+        if not os.path.exists(path):
+            print(f"  Warning: {path} not found, skipping")
+            continue
+        loader = TextLoader(path, encoding="utf-8")
+        docs = loader.load()
+        all_docs.extend(docs)
+
+    if not all_docs:
+        print("  No documents to index")
+        return 0
+
+    return add_documents(all_docs, chunk_size, chunk_overlap)
+
+
+def get_document_count():
+    """Return the number of documents in the ChromaDB collection."""
+    try:
+        vector_store = get_vector_store()
+        collection = vector_store._collection
+        return collection.count()
+    except Exception:
+        return 0

@@ -1,7 +1,6 @@
 """Streamlit UI for the AI Customer Support Assistant."""
 
 import os
-import tempfile
 import uuid
 
 import streamlit as st
@@ -57,42 +56,27 @@ with st.sidebar:
 
     st.divider()
 
-    # PDF Upload
+    # File Upload
     st.header("Document Management")
     uploaded_files = st.file_uploader(
-        "Upload Policy PDFs",
-        type=["pdf"],
+        "Upload Files",
+        type=["csv", "pdf", "txt"],
         accept_multiple_files=True,
-        help="Upload company policy PDFs to add to the knowledge base.",
+        help="CSV files go to SQL database. PDF/TXT files go to the vector store.",
     )
 
     if uploaded_files:
-        if st.button("Index Uploaded PDFs"):
-            with st.spinner("Processing and indexing PDFs..."):
-                try:
-                    from src.db.vector_store import add_pdf_files
+        if st.button("Process Uploaded Files"):
+            try:
+                from src.processing.file_processor import process_uploaded_files
 
-                    temp_paths = []
-                    for uploaded_file in uploaded_files:
-                        temp_path = os.path.join(
-                            tempfile.gettempdir(), uploaded_file.name
-                        )
-                        with open(temp_path, "wb") as f:
-                            f.write(uploaded_file.getbuffer())
-                        temp_paths.append(temp_path)
-
-                    num_chunks = add_pdf_files(temp_paths)
-                    st.success(
-                        f"Indexed {len(uploaded_files)} PDF(s) "
-                        f"({num_chunks} chunks) into the knowledge base."
-                    )
-
-                    # Clean up temp files
-                    for p in temp_paths:
-                        if os.path.exists(p):
-                            os.remove(p)
-                except Exception as e:
-                    st.error(f"Error indexing PDFs: {e}")
+                success, failure = process_uploaded_files(uploaded_files, st)
+                if success:
+                    st.success(f"Processed {success} file(s) successfully.")
+                if failure:
+                    st.warning(f"{failure} file(s) had errors.")
+            except Exception as e:
+                st.error(f"Error processing files: {e}")
 
     st.divider()
 
@@ -106,17 +90,26 @@ with st.sidebar:
         cursor = conn.cursor()
         cursor.execute("SELECT COUNT(*) FROM customers")
         num_customers = cursor.fetchone()[0]
+        cursor.execute("SELECT COUNT(*) FROM products")
+        num_products = cursor.fetchone()[0]
         cursor.execute("SELECT COUNT(*) FROM tickets")
         num_tickets = cursor.fetchone()[0]
         conn.close()
         st.metric("Customers in DB", num_customers)
+        st.metric("Products in DB", num_products)
         st.metric("Support Tickets", num_tickets)
     else:
         st.warning("Database not found. Run `python scripts/setup.py` first.")
 
     chroma_dir = os.getenv("CHROMA_PERSIST_DIR", "data/chroma")
     if os.path.exists(chroma_dir):
-        st.metric("Vector Store", "Active")
+        try:
+            from src.db.vector_store import get_document_count
+
+            doc_count = get_document_count()
+            st.metric("Vector Store Docs", doc_count)
+        except Exception:
+            st.metric("Vector Store", "Active")
     else:
         st.metric("Vector Store", "Not initialized")
 
