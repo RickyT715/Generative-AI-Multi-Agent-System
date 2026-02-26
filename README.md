@@ -8,6 +8,10 @@
 
 An intelligent multi-agent customer support system powered by LangGraph, featuring natural language querying of customer data (Text-to-SQL), company policy documents (RAG), and a conversational general assistant — all orchestrated by a supervisor router agent.
 
+## Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/EcxOXfc0TR0/maxresdefault.jpg)](https://youtu.be/EcxOXfc0TR0)
+
 ## Architecture
 
 ```mermaid
@@ -293,10 +297,6 @@ python -m pytest tests/test_ragas_evaluation.py -v -m integration -s
 | MCP Server | FastMCP (mcp 1.26.0) |
 | UI | Streamlit 1.54 |
 | PDF Processing | PyMuPDF |
-
-## Demo Video
-
-> [Demo video URL placeholder — to be added]
 
 ## License
 
