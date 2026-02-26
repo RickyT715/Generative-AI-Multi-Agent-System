@@ -2,9 +2,18 @@
 
 import os
 import sys
+from pathlib import Path
 
 # Ensure project root is on the path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+# Use a project-local HuggingFace cache to avoid system permission issues
+os.environ.setdefault("HF_HOME", str(PROJECT_ROOT / ".hf_cache"))
+
+from dotenv import load_dotenv  # noqa: E402
+
+load_dotenv(PROJECT_ROOT / ".env")
 
 
 def main():
