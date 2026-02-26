@@ -32,6 +32,9 @@ streamlit==1.54.0
 faker
 fpdf2
 
+# Evaluation
+ragas
+
 # Utilities
 python-dotenv
 pydantic>=2.0

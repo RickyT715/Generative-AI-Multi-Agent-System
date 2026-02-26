@@ -171,6 +171,43 @@ ruff check .
 ruff format --check .
 ```
 
+## RAG Pipeline Evaluation (RAGAS)
+
+The project includes [RAGAS](https://docs.ragas.io/) evaluation to measure retrieval and answer quality with concrete metrics. The test dataset contains 15 questions (5 per policy PDF) with ground truth answers derived from the actual document content.
+
+### Running the Evaluation
+
+```bash
+# Retrieval quality only (no LLM generation, cheaper)
+python tests/test_ragas_evaluation.py --mode retrieval
+
+# Answer quality only
+python tests/test_ragas_evaluation.py --mode answer
+
+# Full evaluation (both)
+python -m pytest tests/test_ragas_evaluation.py -v -m integration -s
+```
+
+### Evaluation Results
+
+**Retrieval Quality** — did the retriever fetch the right chunks?
+
+| Metric | Score |
+|--------|-------|
+| Context Recall | 0.77 |
+| Context Precision | 0.60 |
+
+**Answer Quality** — did the LLM produce correct answers?
+
+| Metric | Score |
+|--------|-------|
+| Faithfulness | 0.97 |
+| Factual Correctness | 0.49 |
+| Answer Relevancy | 0.82 |
+| Semantic Similarity | 0.82 |
+
+> These tests are marked `@pytest.mark.integration` and `@pytest.mark.slow`, so they are skipped in CI. They require a populated ChromaDB vector store and LLM API keys.
+
 ## Tech Stack
 
 | Component | Technology |
