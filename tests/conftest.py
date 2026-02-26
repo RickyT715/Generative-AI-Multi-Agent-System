@@ -89,4 +89,7 @@ def temp_sqlite_db():
 
     yield db_path
 
-    os.unlink(db_path)
+    try:
+        os.unlink(db_path)
+    except PermissionError:
+        pass  # Windows may hold SQLite file locks

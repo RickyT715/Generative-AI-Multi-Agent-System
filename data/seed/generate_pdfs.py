@@ -54,7 +54,7 @@ class PolicyPDF(FPDF):
         self.set_font("Helvetica", "", 11)
         self.set_text_color(0, 0, 0)
         self.cell(10)
-        self.cell(5, 6, chr(8226))
+        self.cell(5, 6, "-")
         self.multi_cell(0, 6, text)
         self.ln(1)
 
