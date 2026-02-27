@@ -266,21 +266,25 @@ python -m pytest tests/test_ragas_evaluation.py -v -m integration -s
 
 ### Evaluation Results
 
+The RAG pipeline uses **semantic chunking** (SemanticChunker, percentile breakpoint=90), **hybrid search** (BM25 + dense via EnsembleRetriever, weights 0.4/0.6), and **cross-encoder reranking** (ms-marco-MiniLM-L-6-v2, top_n=5).
+
 **Retrieval Quality** — did the retriever fetch the right chunks?
 
-| Metric | Score |
-|--------|-------|
-| Context Recall | 0.77 |
-| Context Precision | 0.60 |
+| Metric | Baseline | Enhanced | Change |
+|--------|----------|----------|--------|
+| Context Recall | 0.77 | **1.00** | +0.23 |
+| Context Precision | 0.60 | **0.84** | +0.24 |
 
 **Answer Quality** — did the LLM produce correct answers?
 
-| Metric | Score |
-|--------|-------|
-| Faithfulness | 0.97 |
-| Factual Correctness | 0.49 |
-| Answer Relevancy | 0.82 |
-| Semantic Similarity | 0.82 |
+| Metric | Baseline | Enhanced | Change |
+|--------|----------|----------|--------|
+| Faithfulness | 0.97 | **0.95** | -0.02 |
+| Factual Correctness | 0.49 | **0.60** | +0.11 |
+| Answer Relevancy | 0.82 | **0.97** | +0.15 |
+| Semantic Similarity | 0.82 | **0.84** | +0.02 |
+
+> Baseline = fixed-size chunking (512 chars) + dense-only search (k=5). Enhanced = semantic chunking + hybrid BM25/dense + cross-encoder reranking.
 
 > These tests are marked `@pytest.mark.integration` and `@pytest.mark.slow`, so they are skipped in CI. They require a populated ChromaDB vector store and LLM API keys.
 
@@ -294,6 +298,7 @@ python -m pytest tests/test_ragas_evaluation.py -v -m integration -s
 | Vector Database | ChromaDB 1.5.1 |
 | SQL Database | SQLite |
 | Embeddings | HuggingFace (all-MiniLM-L6-v2) |
+| Reranker | cross-encoder/ms-marco-MiniLM-L-6-v2 |
 | MCP Server | FastMCP (mcp 1.26.0) |
 | UI | Streamlit 1.54 |
 | PDF Processing | PyMuPDF |
